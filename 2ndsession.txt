@@ -1,0 +1,60 @@
+2nd session question,
+
+what is root ?
+
+Process managment:
+process is a set of instruction that CPU follows to complete a task. process is important for multi tasking. to process a task uses CPU, memory and other resources.
+
+two types of process:
+1. Foreground process
+2. background process
+
+Foreground process:
+foreground is a process that runs in the terminal, directly intract with users, receive input from users and disply the outputs.
+
+the behaviour of foreground process is,when the foreground process is running we cannot use the terminal to run the other commands until the foreground process is stopped or finished.
+
+background process:
+background process runs independently of the terminal, it does not intract with users but it allows the terminal to be use other commands, the process will be running in the background.
+
+examples of foreground and background process.
+
+process managment commands: (ps, top, kill)
+ps - currently running process (PTS - number of terminal opened)
+ps aux - showing all the process that are running
+ctrl+c to exit from running command.
+jobs - show running background process. (to bring background process to foreground - fg %(number of running ))
+kill Pid - to stop the process
+top - getting details about total task (can see how much cpu and memory consumed by separate task)
+htop - more like human readable.
+
+
+system monitaring tools commands (du, df, free):
+df (disk free)- Display disk space usage.
+df -h -- df human readable 
+du (disk usage) - estimate files or directory space usage.
+du directory/filepath - to see specefic disk usage
+free - shows memory and space usage
+
+Networking commands (ping, curl, telnet):
+ping - to test wether the server or anthor computer over the internet it is reachable or not/ identifing networking issues/ reachable over the networks.curl curl - is use to transfer data (it is using http and https protocal) / it is widely using for testing the web servers/ getting the content of given url/ 
+curl -I url - identifing any issuse between fetching and acessing url (if the http is 200, it is fine, other than 200 it has issuse)
+curl -O url -- downloading any files in the website.
+curl -H "Authorization: bearer your_token" url -- use to authorise a request.
+telnet - used to test manage and debug port 
+
+SSH
+ssh:secure shell that access by a remote system.it is used to commuicate between two                                                                                                                                                                                                                                         computers through intenet with secure.the data will be encrypted so that no one can accessdata.
+Ssh works between client and server.
+The client should be authentication to use the the server.
+              
+
+There are two types of authentication.
+1.Keytype authentication
+2.password type authentication
+
+The keytype is more secure than passwordtype authentication.the keytype generate keypair as 
+1.public key
+2.private key
+
+The public key will stored in remote server..the private key will store in user machine.It should not share to anyone.if  only the private key is matched with the public key then we can use the server.
