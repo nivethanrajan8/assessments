@@ -1,1 +1,194 @@
 successfully did pushing. now trying to do pull.
+
+
+
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS F:\Computer networking & cloud security\DevOps\GIT workshop> git config --global user.name "nivethanrajan8"
+PS F:\Computer networking & cloud security\DevOps\GIT workshop> git config --global user.email "nivethanrajan8@gmail.com"
+PS F:\Computer networking & cloud security\DevOps\GIT workshop> git clone https://github.com/nivethanrajan8/samplerepo.git
+Cloning into 'samplerepo'...
+warning: You appear to have cloned an empty repository.
+PS F:\Computer networking & cloud security\DevOps\GIT workshop> git clone https://github.com/nivethanrajan8/assessments.
+git
+Cloning into 'assessments'...
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 13 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (13/13), 250.44 KiB | 581.00 KiB/s, done.
+Resolving deltas: 100% (2/2), done.
+PS F:\Computer networking & cloud security\DevOps\GIT workshop> cd .\samplerepo\
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git add .\dummy.txt
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git commit -m "feat : added my name"
+[main (root-commit) d1fbde6] feat : added my name
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dummy.txt
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git push
+fatal: User cancelled dialog.
+Username for 'https://github.com': nivethanrajan8
+Password for 'https://nivethanrajan8@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/nivethanrajan8/samplerepo.git/'
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git push origin
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 240 bytes | 80.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/nivethanrajan8/samplerepo.git
+ * [new branch]      main -> main
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git push
+Everything up-to-date
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> cd assessments
+cd : Cannot find path 'F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo\assessments' because it
+does not exist.
+At line:1 char:1
++ cd assessments
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (F:\Computer net...epo\assessments:String) [Set-Location], ItemNotFoundE
+   xception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> cd ..
+PS F:\Computer networking & cloud security\DevOps\GIT workshop> cd assessments
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git add .\1st session.txt
+fatal: pathspec '.\1st' did not match any files
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git add .\1stsession.txt
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git commit -m "feat : added form local repo"
+[main d852f31] feat : added form local repo
+ 1 file changed, 49 insertions(+)
+ create mode 100644 1stsession.txt
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git push origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.30 KiB | 1.30 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nivethanrajan8/assessments.git
+   693a691..d852f31  main -> main
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git add .\2ndsession.txt
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git commit
+[main de67b1d] added from local repo
+ 1 file changed, 60 insertions(+)
+ create mode 100644 2ndsession.txt
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.56 KiB | 797.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nivethanrajan8/assessments.git
+   d852f31..de67b1d  main -> main
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> mkdir notes
+
+
+    Directory: F:\Computer networking & cloud security\DevOps\GIT workshop\assessments
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        10/29/2024  11:56 AM                notes
+
+
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> cd notes
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments\notes> git add .\1stsession.txt
+fatal: pathspec '.\1stsession.txt' did not match any files
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments\notes> cd ..
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git add .\shellscripting.txt
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git commit -m "added from local repo"
+[main a966b46] added from local repo
+ 1 file changed, 32 insertions(+)
+ create mode 100644 shellscripting.txt
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 957 bytes | 319.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nivethanrajan8/assessments.git
+   de67b1d..a966b46  main -> main
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> cd ..
+PS F:\Computer networking & cloud security\DevOps\GIT workshop> cd samplerepo
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 922 bytes | 1024 bytes/s, done.
+From https://github.com/nivethanrajan8/samplerepo
+   d1fbde6..f4f82f4  main       -> origin/main
+Updating d1fbde6..f4f82f4
+Fast-forward
+ dummy.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git add .\new.html
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git commit -m "pushing the html file"
+[main b82727f] pushing the html file
+ 1 file changed, 14 insertions(+)
+ create mode 100644 new.html
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 531 bytes | 531.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/nivethanrajan8/samplerepo.git
+   f4f82f4..b82727f  main -> main
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git add .\nive.css
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git commit -m "pushing the css file"
+[main c4d3c8e] pushing the css file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 nive.css
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/nivethanrajan8/samplerepo.git
+   b82727f..c4d3c8e  main -> main
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\samplerepo> cd ..
+PS F:\Computer networking & cloud security\DevOps\GIT workshop> cd assessments
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git add .\new.docx
+fatal: pathspec '.\new.docx' did not match any files
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git add .\neew.docx
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git commit -m "pushing the docx file from local repo"
+[main 73dd362] pushing the docx file from local repo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 neew.docx
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nivethanrajan8/assessments.git
+   a966b46..73dd362  main -> main
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments> git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 948 bytes | 2.00 KiB/s, done.
+From https://github.com/nivethanrajan8/assessments
+   73dd362..e17672b  main       -> origin/main
+Updating 73dd362..e17672b
+Fast-forward
+ neew.docx | 1 +
+ 1 file changed, 1 insertion(+)
+PS F:\Computer networking & cloud security\DevOps\GIT workshop\assessments>
