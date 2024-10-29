@@ -1,0 +1,32 @@
+Programming:
+it is used for software industry, it is kind of compilation and intepretation to write human understandable language to computer understandable language. it does not have any sequence. every program start at aplace and it can do anything.
+
+Scripting:
+it is not something like programming. scripting mostly has a seqence, one by one excucation.
+scripting pattern: KSH, ZSH (for mac),SH (legacy- used everywhere) and BASH (stable and standard)
+
+Key Features of Shell scripting:
+1.Automation
+2.Time Scheduling
+3.Input and output handling
+4.operators, conditional logic and loops
+
+common text editor in linux: nano, vi and vim
+
+vi and vim is defult editor in linux but nano have to install for use.
+
+commands:
+vim (name of the file you're creating).sh = .sh can be given or not. editor is intractive mode.
+:q = to close window
+i = inserting something to the editor(created file). can type anything.
+esc = reading mode (can't type anything)
+
+BASH Scripting:
+
+mkdir (filename) = create directory
+touch (file name) = create empty file
+cat (filename)   = create file. cat is not interactive. 
+cat > (filename) = creating a file with content  ======= ctrl+d - to save after the file written
+cat >> (filename) = whatever is added, adds additionally
+cd - = going pack to previous directory
+pwd = showing directory
