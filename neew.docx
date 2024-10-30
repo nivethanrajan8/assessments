@@ -9,7 +9,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
 
 PS F:\Computer networking & cloud security\DevOps\GIT workshop> git config --global user.name "nivethanrajan8"
-PS F:\Computer networking & cloud security\DevOps\GIT workshop> git config --global user.email "nivethanrajan8@gmail.com"
+PS F:\Computer networking & cloud security\DevOps\GIT workshop> git config --global user.email "nothing"
 PS F:\Computer networking & cloud security\DevOps\GIT workshop> git clone https://github.com/nivethanrajan8/samplerepo.git
 Cloning into 'samplerepo'...
 warning: You appear to have cloned an empty repository.
