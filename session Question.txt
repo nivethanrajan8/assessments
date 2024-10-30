@@ -1,0 +1,57 @@
+session Question:
+
+
+
+
+
+
+
+introduction to DevOps:
+devolopment activity includes building an app, writing business logic, etc.
+Operational guy is someone who is going to place an app to the server, run it or excute it.Devops used to exist before cloud.
+
+how the software is build and deliver to the coustomers:
+how server works, how physical support helps to keep the server alive (a person there to be in presence to look after the server and also a person who provied power supply). server side managed by Ops and application managed by Devs.known about Data center and how they works, advantages and disadvantages of data centers. 
+
+Addressing how cloud is helping to solve the disadvantage of data centers.  For example, pay as you go use, allocating or disallocating servers within a minute, can manage anything that is managed by human resource (can manage operating system, networking configures, security, and deployment life cycle).
+
+cloud is not just storage it is a big data center. advantages of cloud.
+
+how to request a server (how many cpu, RAM)
+
+Devoloping side:
+we are not going to do any devolopment, In our terms what is devolopment, we should be having a knowledge of debugging, for any troubleshooting, deploying.
+
+Operstion side:
+manily cloud operations, examples,Provision Resoruces, managing security, monitaring the app, notifying or alerting, automating infraprovisional.
+
+
+
+•Logics in DevOps
+1. Shell Scripting
+2. Linux Administration
+3. Version Control
+4. Deployment Strategies
+
+• flavors in Linux
+1. Redhat
+2. Fedoral
+3. Debian
+4. Ubuntu
+5. SUSE Linux
+
+•Linux basics commands
+	Directories ->folder
+	Cat->Display file content
+	Whoami ->Username
+	$->In standard user
+	#->Administator mood
+	sudo->super user
+	ls->List
+	Touch->Create a file eg :touch file.txt
+	Vim->we can edit the file like insert eg:vim file.txt 
+	Man ->it help us showing detail of commands
+	Mkdir ->create directory
+	Cp->copy source to destination
+	rm->remove file
+	pwd->display current directory
