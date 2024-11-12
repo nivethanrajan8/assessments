@@ -12,6 +12,7 @@ Command : sudo apt update
 Step :2
 Install nginx
 Command : sudo apt install nginx
+![my image](Picture2.png)
  
 
 Step :3
