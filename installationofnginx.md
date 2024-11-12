@@ -4,7 +4,7 @@ Step :1
 Update the package
 Command : sudo apt update
 
- ![Alt text](Picture1.png")
+![My Image](Picture1.png)
 
  
  
