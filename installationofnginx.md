@@ -4,7 +4,7 @@ Step :1
 Update the package
 Command : sudo apt update
 
- 
+ ![Alt text]("F:\Computer networking & cloud security\DevOps\photos\Picture1.png")
 
  
  
