@@ -6,6 +6,7 @@ Command : sudo apt update
 
 ![My Image](Picture1.png)
 
+![my image](Picture2.png)
  
  
 Step :2
