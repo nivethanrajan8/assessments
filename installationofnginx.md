@@ -18,7 +18,7 @@ Command : sudo apt install nginx
 Step :3
 Enable the nginx service
 Command : sudo systemctl enable nginx
- 
+ ![my image](Picture4.png)
  
 
 Step :4
