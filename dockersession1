@@ -1,0 +1,121 @@
+ To install application
+
+inside OS there are,
+-kernal
+-libraries
+-network
+-install application
+
+
+after installing docker,
+
+Step 1: check docker version, command for that "docker --version"
+
+
+Step 2: command "docker info"
+	-if the client and server details are shown, it means your docker engine is running.
+	-in DevOps we use Docker Buildx and Docker Compose
+
+
+*Difference between Image and Container:
+	- Image 
+		-is set of instracutions have given
+		-it is just a template
+		-in not running script
+		-can anyone take and use
+		-it has everything that needs to run a OS in it.
+	- Container
+		-When you start running that Image it becomes a container.
+
+Step 3: command "docker pull nginx"
+	-when you give docker pull command to the nginx and not specify it's version, it always pull the lateset one.
+
+step 3.1: when i want to pull a specific nginx image i use tag, so what is tag, let's take this command "docker pull nginx:1.26.2-alpine3.20-perl" as an example 
+ ":1.26.2-alpine3.20-perl" this a tag to the immage that used in the above command
+
+Step 4: command "docker images"
+step 5: command "docker ps"  (List all running containers)
+	- command "docker ps -a" (List all running containers including stopped ones)
+Step 6: command "docker stop <container>" - Stop a running container.
+	-before attempting remove container you need to stop the container first.
+step 7: command "docker rm <container>" -remove a stopped container.
+	-Check if it is removed.
+step 8: now i want to run nginx but it is in as a image. command to check that "docker images | grepnginx"
+	-what is docker image ? where did it get it from?
+	- it pulled that nginx image from library/nginx.
+	- website - docker.io/library/nginx:latest
+step 9: how to run nginx container
+	-command "docker run --name <container name> <image name>"
+	-this command will run the nginx container, in the terminal we can't write next command after running the container, so i am opening another tab to see the running container for that i am giving this command "docker ps"
+
+step 10: check if it is running on my mechine, to do that i go to web browser and search for localhost, and the browser said can't reach thi page. what does taht mean? it means nginx container has not move to my mechine to run as localhost, it is currently running on it's network (docker network).
+
+step 11: command, ctr+c to exit
+	-command "docker ps -a" to check the exited container
+
+step 12: detach mode:
+	-The detach option on the docker command line indicates that the docker client (docker) will make a request to the server (dockerd), and then the client will exit while that request continues on the server. Part of the confusion may be that docker looks like a single process, where in reality it is a client/server application where the client is just a thin frontend on a REST API to send every command to the server.
+
+With a "docker container run --detach", this means the container will be created, the server will respond with a container id if successful, and the container will continue to run on the server while you are free to run other commands. This is often used for a server (e.g. nginx) you want to start in the background while you continue to run other commands. Note that you can still configure a container with the --interactive and -tty options (often abbreviated -it) and later run a docker container attach to connect to an already running container. (Note, until you attach to the container running with -itd, any attempt by the container to read from stdin would hang, instead of seeing an end of input that often triggers an immediate exit if you just passed -d.)
+
+The opposite of detached mode is foreground mode. That is the default mode, when -d option is not used. In this mode, the console you are using to execute docker run will be attached to standard input, output and error. That means your console is attached to the container's process.
+
+In detached mode, you can follow the standard output of your docker container with docker logs -f <container_ID>.
+
+Why do we need --detach mode?
+
+Server software is generally run in detached containers because it is rare that the software depends on an attached terminal.
+Running detached containers is a perfect fit for programs that sit quietly in the background.
+
+Note:
+Generally, This type of program is called a daemon, or a service. A daemon generally interacts with other programs (or humans over a network) or some other communication channel. When you launch a daemon or other program in a container that you want to run in the background, remember to use either the --detach flag or its short form, -d.
+
+when i run this command,"docker run -d --name nginx-latest nginx", it says, " The container name "/nginx-latest" is already in use by container "3ac769a59508a18c479773f52d3c79f48bb4e8c218fae2e623489a86aebf5f0a". You have to remove (or rename) that container to be able to reuse that name."
+
+
+step 13: to remove that container, it has to be already exited or stopped.
+	- command "docker rm <container name>"
+
+Step 14: now run detach command, "docker run -d --name <container name> <image name>"
+
+step 15: to check whether it is running perfectly or it has erro we use log command
+	- command, "docker logs <container name>" 
+
+step 16: command docker logs -f <container name>
+	-it shows every logs that keep entering, to be simply say it follows every log
+
+Step 17: -p (publish a container's port(s) to the host), command "docker run -d -p 8080:80 --nmae <container name> <image name> "
+
+Step 18: entering into machine(login in a bash mode) command, "docker exec -it <container name> /bin/bash"
+	- exec (executive inside)
+	- i - intteractive
+	- t - terminal
+Step 19: once enter into machine, use command "pwd" and "ls -l" to check 
+	- The pwd command, which stands for print working directory, is a fundamental and frequently used command in Linux. It displays the absolute path of the current working directory, starting from the root directory. This will print the full path of your current location in the file system.
+
+Step 20: look for a html file in nginx, command, "ls -l usr/share/nginx/html/"
+
+Step 21: Get inside that file, command, "cd ls -l usr/share/nginx/html/"
+
+step 22: cat the index.html file
+	- copy the html file and put it in visual studio code and do some change in the html file to show "welcome to Jumisa"
+
+step 23: update the file, command "cat > index.html" , use ctrl+d command to save the file
+	- tried refreshing the web page, but nothing has changed so need to restart the container.
+	- before doing that use "exit" command to exit from the mechine.
+Step 24: now retart the container to check whether it's updated or not
+	- docker stop nginx-latest
+	- docker start nginx-latest
+Step 25: now go back to the web page check it if it's updated.
+	- it's working!
+
+Step 26: inspect - get detailed information about container, command "docker inspect <container name>"
+
+Step 27: Given task - to check what architecture - it will be inside image, command "docker inspect <image name>"
+
+step 28: retart command "docker restart <container name>"
+
+Step 29: once i removed the container which i have made an upadte (changed nginx to Jumisa) later i run that container i will get the same old html file not the one i have made changes. so how to store and retain that?, and for that we need a volume.
+
+Step 30: Volume, command "docker run -d -p 8080:80 -v <root path>:<html file path> --name <container name> <image name>"
+	- refrshed the webpage it says "403 fobidden"
