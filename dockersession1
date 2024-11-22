@@ -119,3 +119,71 @@ Step 29: once i removed the container which i have made an upadte (changed nginx
 
 Step 30: Volume, command "docker run -d -p 8080:80 -v <root path>:<html file path> --name <container name> <image name>"
 	- refrshed the webpage it says "403 fobidden"
+Docker Volume
+
+docker volume ls - list out all the docker volume
+
+Stpe 1: docker volume create <volume name>
+	- to create a docker volume
+
+Step 2: docker volume ls
+	- check if the volume is created
+
+step 3: docker run --rm -it -v web-date:/mnt alpine sh
+	- 
+--rm:
+
+This flag instructs Docker to automatically remove the container once it exits. This is useful for one-off commands or temporary containers.
+
+-it:
+This flag combination specifies two options:
+-i: Interactive mode. Keeps STDIN open, allowing you to interact with the container.
+
+-t: Allocates a pseudo-TTY. This is necessary for interactive sessions, providing a terminal interface.
+
+-v web-date:/mnt:
+
+This flag mounts a local directory or volume as a volume inside the container. Here's how it works:
+web-date: This is the volume on my host machine. It is a named volume.
+/mnt: This is the destination directory inside the container where the host volume will be mounted.
+
+alpine:
+This specifies the Docker image to use for the container. Alpine Linux is a lightweight Linux distribution often used for Docker containers due to its small size.
+
+sh:
+This is the command to execute inside the container. sh launches a shell, providing you with a command-line interface to interact with the container's environment.
+
+
+Step 4: docker run -d -v web-data:/usr/share/nginx/html -p 85:80 --name app nginx
+		- attaching it to the nginx
+		- check it in the browser if it's work
+Step 5: entering into that container
+	- docker exec -it <container name> /bin/bash
+
+Step 6: entering into the file
+	- cd /usr/share/nginx/html
+	- ls
+Step 7: edit html file
+	- vi index.html
+	- it says vi command not found so updating using "apt update" command.
+	- apt install vim -y
+
+Step 8: edit html file, "vi <file name>"
+i: Insert text before the cursor
+To save your changes and exit Vim:
+
+Press Esc to enter Normal mode.   
+Type :w to save the file.   
+Type :q to quit Vim.   
+To save and quit simultaneously, type :wq.
+
+Step 9: exit
+
+Step 10: check if volume works by stop and start container.
+
+Step 11:
+
+Step 12: adding volume to another container
+
+Step 13: remove the volume, command "docker volume rm <volume name>"
+
