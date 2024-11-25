@@ -27,9 +27,9 @@ npm start
 2 . Architecture Overview
 Flow chart
 Process flow
-
+![my image](flowchart1.jpg)
 Work flow
-
+![my image](workflow1.jpg)
 3 . Roadmap
 3.1 Plan
 Project overview and plan
