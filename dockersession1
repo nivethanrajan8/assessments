@@ -187,3 +187,14 @@ Step 12: adding volume to another container
 
 Step 13: remove the volume, command "docker volume rm <volume name>"
 
+
+Creating docker file
+Step 1: Create a custom folder in my machine
+Step 2: create a docker file inside that folder
+Step 3: Edit the docker file
+Step 4: create custom html file and save it to the folder where the docker file in.
+Step 5: open the terminal and run build command (docker build -t <image name> .)
+step 6: Check docker images to verify if the image has created (docker images)
+Step 7: run the container (docker run -d -p <expose port>:80 --name <container name> <image name>)
+Step 8: Check it in the web browser (localhost:<exposed port>)
+
